@@ -3,10 +3,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
-import '@fontsource/orbitron/400.css';
-import '@fontsource/orbitron/700.css';
-import '@fontsource/rajdhani/400.css';
-import '@fontsource/rajdhani/600.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/700.css';
 
 export default function Index() {
   const [currentTime, setCurrentTime] = useState(900); // 15 минут в секундах
@@ -50,17 +50,17 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-red-900">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
       {/* Header */}
-      <header className="bg-black/90 backdrop-blur-sm border-b border-red-500/20 sticky top-0 z-50">
+      <header className="bg-black/95 backdrop-blur-sm border-b border-gray-800/50 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                 <Icon name="Zap" size={20} className="text-white" />
               </div>
-              <span className="text-white text-xl font-bold" style={{ fontFamily: 'Orbitron' }}>
-                SPEED SERVICE
+              <span className="text-white text-xl font-bold" style={{ fontFamily: 'Inter' }}>
+                PGS
               </span>
             </div>
             <nav className="hidden md:flex space-x-8">
@@ -91,12 +91,12 @@ export default function Index() {
                 <Badge className="bg-red-500 text-white mb-4 px-4 py-2 text-sm font-semibold">
                   🏁 FORMULA 1 СКОРОСТЬ
                 </Badge>
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Orbitron' }}>
+                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Inter' }}>
                   15 МИНУТ
                   <span className="text-red-500 block">ИЛИ СКИДКА</span>
                   <span className="text-yellow-400">15%</span>
                 </h1>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed" style={{ fontFamily: 'Rajdhani' }}>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed" style={{ fontFamily: 'Roboto' }}>
                   Экспресс-замена масла и фильтров в Ростове-на-Дону. 
                   Гарантируем выполнение за 15 минут или предоставляем скидку 15%!
                 </p>
@@ -127,7 +127,7 @@ export default function Index() {
                     <div className="w-full h-full rounded-full bg-black flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-transparent rounded-full"></div>
                       <div className="text-center z-10">
-                        <div className="text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Orbitron' }}>
+                        <div className="text-6xl font-bold text-white mb-2" style={{ fontFamily: 'Inter' }}>
                           {formatTime(currentTime)}
                         </div>
                         <div className="text-red-500 text-sm font-semibold tracking-wider">
@@ -153,11 +153,11 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gray-900/50">
+      <section id="services" className="py-20 bg-black/60">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Orbitron' }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Inter' }}>
                 НАШИ УСЛУГИ
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -167,13 +167,13 @@ export default function Index() {
             
             <div className="grid md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="bg-black/50 border-red-500/20 hover:border-red-500/50 transition-all duration-300 group">
+                <Card key={index} className="bg-black/80 border-gray-700/40 hover:border-red-500/60 transition-all duration-300 group">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <Badge className="bg-red-500/20 text-red-500 border-red-500/30">
                         {service.time}
                       </Badge>
-                      <div className="text-2xl font-bold text-yellow-400" style={{ fontFamily: 'Orbitron' }}>
+                      <div className="text-2xl font-bold text-yellow-400" style={{ fontFamily: 'Inter' }}>
                         {service.price}
                       </div>
                     </div>
@@ -202,7 +202,7 @@ export default function Index() {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Orbitron' }}>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Inter' }}>
                   О НАС
                 </h2>
                 <p className="text-lg text-gray-300 mb-6">
@@ -211,20 +211,20 @@ export default function Index() {
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-red-500 mb-2" style={{ fontFamily: 'Orbitron' }}>
+                    <div className="text-3xl font-bold text-red-500 mb-2" style={{ fontFamily: 'Inter' }}>
                       1000+
                     </div>
                     <div className="text-gray-300">Довольных клиентов</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-red-500 mb-2" style={{ fontFamily: 'Orbitron' }}>
+                    <div className="text-3xl font-bold text-red-500 mb-2" style={{ fontFamily: 'Inter' }}>
                       99%
                     </div>
                     <div className="text-gray-300">Работ за 15 минут</div>
                   </div>
                 </div>
               </div>
-              <div className="bg-black/30 rounded-lg p-8 border border-red-500/20">
+              <div className="bg-black/70 rounded-lg p-8 border border-gray-700/40">
                 <h3 className="text-2xl font-bold text-white mb-4">Наша гарантия</h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-center">
@@ -251,11 +251,11 @@ export default function Index() {
       </section>
 
       {/* Contacts Section */}
-      <section id="contacts" className="py-20 bg-gray-900/50">
+      <section id="contacts" className="py-20 bg-black/60">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Orbitron' }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Inter' }}>
                 КОНТАКТЫ
               </h2>
               <p className="text-xl text-gray-300">
@@ -264,7 +264,7 @@ export default function Index() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-black/50 border-red-500/20 text-center">
+              <Card className="bg-black/80 border-gray-700/40 text-center">
                 <CardContent className="pt-6">
                   <Icon name="MapPin" size={40} className="text-red-500 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-2">Адрес</h3>
@@ -275,7 +275,7 @@ export default function Index() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-black/50 border-red-500/20 text-center">
+              <Card className="bg-black/80 border-gray-700/40 text-center">
                 <CardContent className="pt-6">
                   <Icon name="Phone" size={40} className="text-red-500 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-2">Телефон</h3>
@@ -286,7 +286,7 @@ export default function Index() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-black/50 border-red-500/20 text-center">
+              <Card className="bg-black/80 border-gray-700/40 text-center">
                 <CardContent className="pt-6">
                   <Icon name="Clock" size={40} className="text-red-500 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-2">Режим работы</h3>
@@ -302,19 +302,19 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-red-500/20 py-8">
+      <footer className="bg-black border-t border-gray-800/60 py-8">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                 <Icon name="Zap" size={20} className="text-white" />
               </div>
-              <span className="text-white text-xl font-bold" style={{ fontFamily: 'Orbitron' }}>
-                SPEED SERVICE
+              <span className="text-white text-xl font-bold" style={{ fontFamily: 'Inter' }}>
+                PGS
               </span>
             </div>
             <p className="text-gray-400">
-              © 2024 Speed Service. Все права защищены.
+              © 2024 PGS. Все права защищены.
             </p>
           </div>
         </div>
